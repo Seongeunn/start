@@ -1,3 +1,37 @@
 <!doctype html>
+<head>
+	<title>월급 계산하기</title>
+	<style>
+		input{font-size:1em;}
+		button{font-size:1em;}
+		body{font-size:2em;}
+	</style>
+</head>
+<body>
 
-할루
+ 	<h1 id="display">월급 계산하기</h1>
+ 	<input type="text" id="hourlywage" placeholder="시급을 입력하세요.">원<br>
+ 	<input type="text" id="time" placeholder="근무시간을 입력하세요.">시간<br>
+ 	<input type="text" id="howoften" placeholder="한달에 몇 번 일하나요?">회<br><br>
+ 	<button id="action">계산하기</button>
+
+ 	<script>
+
+ 		action.onclick = function(){
+ 			console.log("OK");
+ 			var myhourlywage = hourlywage.value;
+ 			var mytime = time.value;
+ 			var myhowoften = howoften.value;
+ 			salary(myhowoften,mytime,myhourlywage)
+ 		}
+
+ 	function salary(hourlywage, time, howoften){
+ 		
+ 		var salary  = (hourlywage*time*howoften);
+ 		var Text = "당신의 시급은 " + hourlywage +" 원 이고," +
+ 					"한 달 월급은 " + salary + "원 입니다.";
+ 		display.innerHTML = Text;
+ 	}
+
+ 	</script>
+ </body>
